@@ -17,6 +17,11 @@
 // init_uart: Initialize everything necessary for the UART functionality you are implementing.  Be sure not to affect pins other than the TX and RX pins (output values, directions, or select registers).  You must support a baud rate of 9600 (UART_BAUD_9600) and 115200 (UART_BAUD_115200).  The other baud rates are optional.
 void init_uart(char baud);
 
+DCOCTL = 0;                 // Select lowest DCOx and MODx settings
+BCSCTL1 = CALBC1_8MHZ;      // Set range (1,8,16)
+DCOCTL = CALDCO_8MHZ;       // Set DCO step and modulation
+
+
 // uninit_uart: Uninitialize the uart driver.
 void uninit_uart(void);
 
