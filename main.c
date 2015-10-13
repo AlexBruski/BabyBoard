@@ -4,7 +4,7 @@
  * Provides a UART interface for the MSP430G2553.
  *
 */
-
+//hi 
 #include <msp430g2553.h>
 #include "uart.h"
 
